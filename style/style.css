@@ -5,13 +5,14 @@ body {
 
 #poster {
     display: grid;
+    grid-gap: 10px;
     grid-template-columns: 1fr 1fr [last];
 }
 
 .box {
-    background-color: lightblue;
+    background-color: lavender;
     border-radius: 5px;
-    padding: 10px;
+    padding: 25px;
 }
 
 .header {
@@ -31,4 +32,16 @@ svg {
 
 .dimple-line {
     stroke: red !important;
+}
+
+.left {
+    grid-column: 1;
+}
+
+.right {
+    grid-column: 2;
+}
+
+h3 {
+    font-family: 'Roboto', sans-serif;
 }

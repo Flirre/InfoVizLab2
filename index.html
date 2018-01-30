@@ -14,6 +14,7 @@
 	</script>
 
 	<link rel="stylesheet" type="text/css" href="style/style.css">
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400' rel='stylesheet' type='text/css'>
     </head>
     <body>
 
@@ -23,21 +24,31 @@
 	    <div class="box header">
 		<h1>Workshop 2, Infovis 2018</h1>
 	    </div>
-	    <div class="box">
+	    <div class="box left">
 		<h2>D3.js plot</h2>
 		<div id="d3Container"></div>
 	    </div>
-	    <div class="box"><h2>Dimple.js plot</h2>
+	    <div class="box right"><h2>Dimple.js plot #1</h2>
 		<div id="dimpleContainer"></div>
 		<button onclick="dimpleZoomLeft()">Zoom Left</button>
 		<button onclick="dimpleZoomReset()">Reset Zoom</button>
 		<button onclick="dimpleZoomRight()">Zoom Right</button>
 	    </div>
-	    <div class="box">
+	    <div class="box left">
+		<h3> Here some data regarding the Challenger, and different test launches, is presented.</h3>
+		<h3> Above, you can see damage index compared to the temperature for different launched. That graph has been constructed using D3.js.
+		</h3>
 
+		<h3>
+		    Beside that we have the Erosion incidents compared to the temperature. This graph was made using Dimple.js and can be interacted with using the buttons underneath it.
+		</h3>
+
+		<h3>
+		    And last but not least, in the bottom right corner we hade another plot made using Dimple.js where you can see what number of erosion incidents occured for different flights. The buttons below it can be used to tidy up the graph.
+		</h3>
 	    </div>
-	    <div class="box">
-		<h3>Create additional Dimple.js plot(s)
+	    <div class="box right">
+		<h3> Dimple.js plot #2
 		    <div id="dimpleContainer2"></div>
 		    <button onclick="dimpleFilter()">Remove non-erroded flights</button>
 		    <button onclick="dimpleOrder()">Order flights</button>
