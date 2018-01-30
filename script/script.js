@@ -33,11 +33,11 @@ function drawD3Plot() {
     // Add axes first to show plots on top
     var x_axis = svg.append("g")
         .classed("x axis", true)
-        .attr("transform", function () { return "translate(0," + y.range()[0] + ")" });
+        .attr("transform", function () { return "translate(0," + y.range()[0] + ")"; });
 
     var y_axis = svg.append("g")
         .classed("y axis", true)
-        .attr("transform", function () { return "translate(" + x.range()[0] + ",0)" });
+        .attr("transform", function () { return "translate(" + x.range()[0] + ",0)"; });
 
     // Add line first to show markers on top
     var line_path = svg.append("path")
@@ -54,7 +54,7 @@ function drawD3Plot() {
         // Sort the data to make the line work right
         loadedData.sort(function (x1, x2) {
             return d3.ascending(x1["Temperature F"], x2["Temperature F"]);
-        })
+        });
 
         line_path.data([loadedData]);
 
