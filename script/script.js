@@ -97,38 +97,6 @@ function drawD3Plot() {
     return update;
 }
 
-function d3RandomizeData() {
-    var randomIndex = Math.floor(Math.random() * loadedData.length);
-    loadedData[randomIndex]["Damage index"] = Math.random() * 10;
-    loadedData[randomIndex]["Temperature F"] = 40 + Math.random() * 40;
-    if (randomIndex < 4) {
-        loadedData.push(loadedData[randomIndex]);
-    }
-    if (randomIndex > 6) {
-        loadedData.splice(randomIndex, 1);
-    }
-
-    if (d3Update) {
-        d3Update();
-    }
-}
-
-function d3RandomZoom() {
-    if (d3Update) {
-        domainX = [Math.random() * 70, 75];
-        domainY = [0, 5 + Math.random() * 10];
-        d3Update();
-    }
-}
-
-function d3ResetZoom() {
-    if (d3Update) {
-        domainX = [50, 75];
-        domainY = [0, 13];
-        d3Update();
-    }
-}
-
 var dimpleChart = false;
 
 function drawDimplePlot() {
