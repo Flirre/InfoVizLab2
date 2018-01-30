@@ -190,7 +190,7 @@ function dimpleZoomRight() {
 }
 function dimpleFilter() {
     dimpleChart2.data = dimple.filterData(loadedData,"Erosion incidents",["1", "3"]);
-    dimpleChart.draw(0,false);
+    dimpleChart2.draw(1000,false);
 }
 
 function dimpleOrder() {
